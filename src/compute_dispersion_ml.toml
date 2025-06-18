@@ -1,0 +1,17 @@
+[DEFAULT]
+WINDOW = 512
+IMAGE_SIZE = 32
+TEST_DATA_PATH = '../test/images'
+INTENSITY_SCALE = 1024
+FIGURE_SIZE = [12,8] 
+VMIN = 250
+VMAX = 300
+TRACE_ROW = 1500
+FIND_PEAKS = {MIN_INTENSITY = 0.05, DISTANCE = 15}
+
+[SPECTRUM]
+fits_file = '../data/NEON/Light_NEON_10sec_Bin1_22.1C_gain0_2025-06-04_211202_frame0001.fit'
+
+[MODEL]
+TRAIN_DATA_PATH = '../../keras_based_line_identification/data/train'
+MODEL_FILE = '../data/model/model.h5'
