@@ -84,3 +84,20 @@ Download tensorflow-deps-2.10.0-0.tar.bz2 from https://anaconda.org/apple/tensor
 > conda install notebook \
 > pip install ipykernel \
 > pip install astropy
+
+## About the model
+
+The model is a pre-trained, tensor-based CNN created with my 
+[keras_based_lineidentification](https://github.com/michaelwerger/keras_based_line_identification) project on GitHub
+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------|------------------------|---------------|
+| reshape (Reshape)               | (None, 32, 32, 1)      |             0 |
+| conv2d (Conv2D)                 | (None, 28, 28, 32)     |           832 |
+| max_pooling2d (MaxPooling2D)    | (None, 14, 14, 32)     |             0 |
+| conv2d_1 (Conv2D)               | (None, 10, 10, 64)     |        51,264 |
+| max_pooling2d_1 (MaxPooling2D)  | (None, 5, 5, 64)       |             0 |
+| flatten (Flatten)               | (None, 1600)           |             0 |
+| dense (Dense)                   | (None, 1024)           |     1,639,424 |
+| dropout (Dropout)               | (None, 1024)           |             0 |
+| dense_1 (Dense)                 | (None, 26)             |        26,650 |
